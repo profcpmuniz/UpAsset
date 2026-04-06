@@ -113,7 +113,7 @@ O backend também trata erros da API e retorna JSON amigável para o frontend.
 
 A documentação pública da Uphold está disponível em:
 
-- https://uphold.com/en/developer/documentation
+- https://docs.uphold.com/#introduction
 
 Principais detalhes de API usados neste projeto:
 
