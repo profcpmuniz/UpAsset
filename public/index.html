@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Uphold Explorer</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header class="hero">
+        <h1>Uphold Explorer</h1>
+        <p>Exploração simples da API pública da Uphold usando Rails como proxy.</p>
+      </header>
+
+      <section class="card">
+        <div class="form-row">
+          <label for="pair-select">Par de moedas</label>
+          <select id="pair-select">
+            <option>BTC-USD</option>
+            <option>BTC-EUR</option>
+            <option>ETH-USD</option>
+            <option>ETH-EUR</option>
+            <option>XRP-USD</option>
+            <option>USD-EUR</option>
+            <option>EUR-GBP</option>
+          </select>
+        </div>
+
+        <div class="actions">
+          <button id="view-button" type="button">Ver Cotação</button>
+          <button id="refresh-button" type="button">Atualizar</button>
+        </div>
+
+        <div id="message" class="message"></div>
+
+        <div id="quote-card" class="quote-card hidden">
+          <div>
+            <span>Par</span>
+            <strong id="pair-label">-</strong>
+          </div>
+          <div>
+            <span>Ask</span>
+            <strong id="ask-value">-</strong>
+          </div>
+          <div>
+            <span>Bid</span>
+            <strong id="bid-value">-</strong>
+          </div>
+          <div>
+            <span>Spread</span>
+            <strong id="spread-value">-</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Principais assets Uphold</h2>
+        <p>Lista direta da API pública da Uphold.</p>
+        <ul id="asset-list" class="asset-list"></ul>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
