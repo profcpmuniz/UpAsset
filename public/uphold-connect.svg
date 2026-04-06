@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="258" height="80" viewBox="0 0 258 80" role="img" aria-labelledby="title desc">
+  <title id="title">Connect with Uphold</title>
+  <desc id="desc">Badge saying Connect with Uphold with Uphold brand colors.</desc>
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00a550" />
+      <stop offset="100%" stop-color="#26d070" />
+    </linearGradient>
+  </defs>
+  <rect width="258" height="80" rx="20" fill="#14152b" />
+  <path d="M28 20.5L41.72 13.5H64.28L78 20.5L83 35L78 49.5L64.28 56.5H41.72L28 49.5L23 35Z" fill="url(#grad)" />
+  <text x="104" y="34" fill="#f7f9fc" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700">Connect with</text>
+  <text x="104" y="56" fill="#00a550" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="800">Uphold</text>
+</svg>

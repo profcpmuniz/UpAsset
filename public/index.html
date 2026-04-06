@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Uphold Explorer</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header class="hero">
+        <div class="logo-row">
+          <img src="https://docs.uphold.com/images/buttons/white_bg/powered_by_uphold-f5c7a873.png" alt="Connect with Uphold" class="brand-logo" />
+          <div>
+            <div class="logo-title">Uphold Explorer</div>
+            <p class="tagline">Uma interface moderna para explorar a API pública da Uphold em tempo real.</p>
+          </div>
+        </div>
+      </header>
+
+      <section class="grid cards">
+        <article class="card panel">
+          <div class="card-header">
+            <div>
+              <h2>Cotação rápida</h2>
+              <p>Consulte um par e veja os principais valores.</p>
+            </div>
+            <span class="chip">Realtime</span>
+          </div>
+
+          <div class="form-row">
+            <label for="pair-select">Par de moedas</label>
+            <select id="pair-select">
+              <option>BTC-USD</option>
+              <option>BTC-EUR</option>
+              <option>ETH-USD</option>
+              <option>ETH-EUR</option>
+              <option>XRP-USD</option>
+              <option>USD-EUR</option>
+              <option>EUR-GBP</option>
+            </select>
+          </div>
+
+          <div class="switch-row">
+            <label class="toggle">
+              <input type="checkbox" id="auto-refresh-toggle" />
+              <span class="slider"></span>
+            </label>
+            <div class="switch-info">
+              <span>Auto-refresh</span>
+              <span id="countdown-label">Próxima em 30s</span>
+            </div>
+          </div>
+
+          <div class="actions split">
+            <button id="view-button" type="button" class="button primary">Ver Cotação</button>
+            <button id="refresh-button" type="button" class="button secondary">Atualizar</button>
+          </div>
+
+          <div id="message" class="message"></div>
+
+          <div id="quote-card" class="quote-card hidden">
+            <div>
+              <span>Par</span>
+              <strong id="pair-label">-</strong>
+            </div>
+            <div>
+              <span>Ask</span>
+              <strong id="ask-value">-</strong>
+            </div>
+            <div>
+              <span>Bid</span>
+              <strong id="bid-value">-</strong>
+            </div>
+            <div>
+              <span>Spread</span>
+              <strong id="spread-value">-</strong>
+            </div>
+          </div>
+        </article>
+
+        <article class="card panel">
+          <div class="card-header">
+            <div>
+              <h2>Comparador de pares</h2>
+              <p>Compare o mesmo ativo em USD, EUR, GBP e CHF.</p>
+            </div>
+            <span class="chip">Compare</span>
+          </div>
+
+          <div class="form-row">
+            <label for="compare-asset-select">Asset</label>
+            <select id="compare-asset-select">
+              <option>BTC</option>
+              <option>ETH</option>
+              <option>XRP</option>
+              <option>LTC</option>
+              <option>BCH</option>
+              <option>ADA</option>
+            </select>
+          </div>
+
+          <button id="compare-button" type="button" class="button primary">Comparar asset</button>
+
+          <div class="table-container">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Par</th>
+                  <th>Ask</th>
+                  <th>Bid</th>
+                  <th>Spread</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody id="comparison-table-body"></tbody>
+            </table>
+          </div>
+        </article>
+      </section>
+
+      <section class="grid cards">
+        <article class="card panel">
+          <div class="card-header">
+            <div>
+              <h2>Histórico de consultas</h2>
+              <p>Últimas 5 cotações consultadas com hora e preço.</p>
+            </div>
+          </div>
+
+          <div class="table-container">
+            <table class="history-table">
+              <thead>
+                <tr>
+                  <th>Par</th>
+                  <th>Preço</th>
+                  <th>Hora</th>
+                </tr>
+              </thead>
+              <tbody id="history-table-body"></tbody>
+            </table>
+          </div>
+        </article>
+
+        <article class="card panel">
+          <div class="card-header">
+            <div>
+              <h2>Principais assets Uphold</h2>
+              <p>Uma prévia dos assets suportados pela Uphold.</p>
+            </div>
+          </div>
+          <ul id="asset-list" class="asset-list"></ul>
+        </article>
+      </section>
+
+      <footer class="info-panel">
+        <p>Esta app usa a API pública da Uphold.</p>
+        <p>Os preços são em tempo real.</p>
+        <p>
+          Documentação: <a href="https://uphold.com/developer/api/documentation/" target="_blank" rel="noopener noreferrer">https://uphold.com/developer/api/documentation/</a>
+        </p>
+      </footer>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
